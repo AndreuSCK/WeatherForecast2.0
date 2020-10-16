@@ -1,6 +1,7 @@
 # Weather Forecast 2.0
 Would you like to have an app that tracks the weather on your city and all the cities you would like to?
 Then this is the app for you, log in to save the cities you want to track, or you can just type the city and get that weather forecast!
+
 ## MVP
 The MVP will cover the following:
 
@@ -12,6 +13,9 @@ The MVP will cover the following:
 
 ## Backlog
 -   Multiple weather forecast weather locations at the same page.
+
+## Why 2.0?
+-   Because everyone of us has seen weather forecast apps, and they mostly lack the feature of dinamically add new locations and see them in real time.
 ## Wireframes
 - https://i.imgur.com/szC2JcG.png
 
