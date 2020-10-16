@@ -32,12 +32,21 @@ The MVP will cover the following:
     - weatherApiService.js
   - img/
 
-## APIs
+## Links
+- **API**
 - https://openweathermap.org/
 
-### **Trello**
+- **Trello**
 - https://trello.com/invite/b/n08Q423p/0ef143f342585e3c99c607ca3beb0fda/weatherforecast
 
-### Git
+- **Git**
 
-[Gihub Repo URL](https://github.com/AndreuSCK/WeatherForecast2.0)
+- [Gihub Repo URL](https://github.com/AndreuSCK/WeatherForecast2.0)
+
+- **Pics**
+- Background pics are from www.unsplash.com
+- Icons from Cumulus Icons по Yannick  https://icon-icons.com/ 
+
+- **Google fonts**
+- Lobster
+- Titillium

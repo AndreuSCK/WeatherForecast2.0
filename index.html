@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Weather Forecast</h1>
+        <img id="menu" src="img/Menu.png">
+    </nav>
+    <main>
+        <article>
+            <section id="formSection">
+                <header>
+                    Type your (spanish) city to begin
+                </header>
+                <form>
+                    <input id="cityForm" type="text" maxlength="20" placeholder="Teruel">
+                    <button id="citySend">
+                        <img class="arrow" alt="submit" src="/img/arrowblack.png">
+                    </button>
+                </form>
+                <header>
+                    Or type your (spanish) zipcode to begin
+                </header>
+                <form action="">
+                    <input id="zipcodeForm" type="text" maxlength="5" placeholder="08204" name="zipcodeFormName">
+                    <button id="zipcodeSend">
+                        <img class="arrow" alt="submit" src="/img/arrowblack.png">
+                    </button>
+
+                </form>
+            </section>
+            <section id="singleSection">
+                <div id="singleTop">
+                    <div id="favourite"><img src="img/redheart.png"></div>
+                    <div id="singleCity"></div>
+                    <div id="search"><img src="img/Search.png"></div>
+                </div>
+                <div id="singleTemperatura"></div>
+                <div id="imgContainer"></div>
+                <div id="singleDescripcion"></div>
+                <!-- <div id="singleDayWeek"></div> -->
+            </section>
+            <section id="singleSectiontriImg">
+                <img src="img/Humedad.png">
+                <img src="img/Termometro.png">
+                <img src="img/Viento.png">
+            </section>
+            <section id="singleSectionTri">
+                <div id="singleTri1">
+                    <div id="singleTri1Info"></div>
+                </div>
+                <div id="singleTri2">
+                    <div id="singleTri2Info"></div>
+                </div>
+                <div id="singleTri3">
+                    <div id="singleTri3Info"></div>
+                </div>
+            </section>
+            <section id="singleSectionFuture">
+                <div class="futureDiv">
+                    <div id="future1img"></div>
+                    <div id="futureDays1" class="futureDays">Thursday</div>
+                    <div id="futureTemp1" class="futureTemp"> </div>
+                </div>
+                <div class="futureDiv">
+                    <div id="future2img"></div>
+                    <div id="futureDays2" class="futureDays"></div>
+                    <div id="futureTemp2" class="futureTemp"> </div>
+
+
+                </div>
+                <div class="futureDiv">
+                    <div id="future3img"></div>
+                    <div id="futureDays3" class="futureDays"></div>
+                    <div id="futureTemp3" class="futureTemp"> </div>
+
+
+                </div>
+            </section>
+            <section id="menuSection">
+                <a href="login.html">
+                    <div>
+                        <h1>
+                            Login
+                        </h1>
+                    </div>
+                </a>
+                <a href="signup.html">
+                    <div>
+                        <h1>
+                            Sign Up
+                        </h1>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div>
+                        <h1>
+                            City forecast search
+                        </h1>
+                    </div>
+                </a>
+            </section>
+        </article>
+    </main>
+    <!-- <button onClick="getWeather()"></button> -->
+    <script src="scripts/apiService.js"></script>
+</body>
+
+</html>
