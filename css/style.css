@@ -17,8 +17,7 @@ body{
     background-position: center bottom;
     padding: 0;
     margin: 0;
-    /* background-image: url("/img/photo-1428908728789-d2de25dbd4e2.webp"); */
-    background-image: url("/img/Background.png");
+    background-image: url("../img/Background.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 16px;
