@@ -17,7 +17,8 @@ body{
     background-position: center bottom;
     padding: 0;
     margin: 0;
-    background-image: url("/img/photo-1428908728789-d2de25dbd4e2.webp");
+    background-image: url("img/backg.png");
+    /* background-image: url("./img/backg.png"); */
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -50,6 +51,10 @@ nav > h1 {
     /* text-align: center; */
     margin-left: 10%;
     margin-top: 15px;
+}
+#hi {
+    opacity: 80%;
+    margin-bottom: 20px;
 }
 main {
     width: 80%;

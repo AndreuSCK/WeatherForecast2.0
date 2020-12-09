@@ -75,7 +75,7 @@ const dataFilter = (data) => {
 
 
     }
-    console.log(weatherData)
+    // console.log(weatherData)
 
     updateUI(weatherData)
 }
@@ -105,11 +105,11 @@ const updateUI = (weatherData) => {
 
 
 
-    console.log(weatherData)
+    // console.log(weatherData)
     let currentIMG = currentImgFunction(weatherData.conditionID, dayNight)
 
 
-    console.log(weatherData.city)
+    // console.log(weatherData.city)
 
 
     currentDay(weatherData.currentDT)
@@ -127,7 +127,7 @@ const updateUI = (weatherData) => {
     document.querySelector('#singleTemperatura').innerText = `${weatherData.temperatureNow}ºC`
     document.querySelector('#singleDescripcion').innerText = `${weatherData.conditionsToday}`
     // document.querySelector('#singleDayWeek').innerText = `${dayName}`
-    console.log(weatherData.conditionsToday)
+    // console.log(weatherData.conditionsToday)
     document.querySelector('#singleTri1Info').innerText = `${weatherData.humedadToday}%`
     document.querySelector('#singleTri2Info').innerText = `${weatherData.tempMaxToday}º ${weatherData.tempMinToday}º`
     document.querySelector('#singleTri3Info').innerText = `${weatherData.windToday}`
@@ -135,7 +135,7 @@ const updateUI = (weatherData) => {
     let future1Img = currentImgFunction(weatherData.conditionsIDfuture1, dayNightFuture1)
     let future2Img = currentImgFunction(weatherData.conditionsIDfuture2, dayNightFuture2)
     let future3Img = currentImgFunction(weatherData.conditionsIDfuture3, dayNightFuture3)
-    console.log("aaa" + weatherData.conditionsIDfuture3, dayNightFuture3)
+    // console.log("aaa" + weatherData.conditionsIDfuture3, dayNightFuture3)
     let img1 = document.createElement('img')
     let img2 = document.createElement('img')
     let img3 = document.createElement('img')
@@ -201,7 +201,7 @@ const currentImgFunction = (condition, dayorNight) => {
     } else {
         currentIMG = "Clouds"
     }
-    console.log(condition, daynight)
+    // console.log(condition, daynight)
     return currentIMG
 }
 const reload = () => {
@@ -239,6 +239,25 @@ window.addEventListener('load', async (event) => {
     let singleStri
     let singleStriImg
     let singleSectionFuture
+    if (localStorage.getItem("users")) {
+
+        console.log(JSON.parse(localStorage.getItem("users"))[0].name)
+        let currentName = JSON.parse(localStorage.getItem("users"))[0].name
+        if (currentName) {
+            if (document.querySelector('#hi')) {
+                let hiElement = document.querySelector('#hi')
+                hiElement.innerText = "Hi " + currentName
+            }
+        }
+    }
+    if (document.querySelector('#favourite')) {
+        document.querySelector('#favourite').addEventListener('click', (e) => {
+            e.preventDefault()
+            document.querySelector('#favouriteIMG').style.opacity = 100
+
+        })
+    }
+
 
     let loginS
     if (document.querySelector('#search')) {

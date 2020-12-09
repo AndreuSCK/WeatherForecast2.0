@@ -17,11 +17,17 @@
         <article>
             <section id="signupSection">
                 <h1>Signup:</h1>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button type="button">
+                <input id="name" type="text" placeholder="Username">
+                <input id="email" type="text" placeholder="Email">
+                <!-- <input id="city" type="text" placeholder="city"> -->
+
+                <input id="password" type="password" placeholder="Password">
+                <input id="repeat-password" type="password" placeholder="Repeat Password">
+
+                <button id="signup-button" type="submit" disabled>
                     <h1>Submit</h1>
                 </button>
+                <div class="message-container"></div>
             </section>
             <section id="menuSection">
                 <a href="login.html">
@@ -52,6 +58,13 @@
     </main>
     <!-- <button onClick="getWeather()"></button> -->
     <script src="scripts/apiService.js"></script>
+    <script src="scripts/Signup.js"></script>
+    <script src="scripts/User.js"></script>
+
+    <script src="scripts/Database.js"></script>
+    <script src="scripts/Validator.js"></script>
+
+
 </body>
 
 </html>

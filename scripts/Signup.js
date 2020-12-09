@@ -2,10 +2,8 @@
 
 
 class Signup {
-  constructor () {
+  constructor() {
     this.nameInput = document.querySelector("#name");
-    this.pokemonInput = document.querySelector("#pokemon");
-    this.typeInput = document.querySelector("#type");
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
     this.repeatPasswordInput = document.querySelector("#repeat-password");
@@ -75,23 +73,19 @@ class Signup {
     event.preventDefault();
     // recoger los valores de cada input
     const name = this.nameInput.value;
-    const pokemon = this.pokemonInput.value;
-    const type = this.typeInput.value;
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
     const repeatPassword = this.repeatPasswordInput.value;
 
-    const newUser = new User(name, pokemon, type, email, password);
+    const newUser = new User(name, email, password);
 
     // guardar el nuevo usuario en la base de datos ( simulada :D )
-    db.saveNewUser( newUser );
+    db.saveNewUser(newUser);
 
 
 
     // vaciar el form
     this.nameInput.value = "";
-    this.pokemonInput.value = "";
-    this.typeInput.value = "";
     this.emailInput.value = "";
     this.passwordInput.value = "";
     this.repeatPasswordInput.value = "";
@@ -108,7 +102,7 @@ class Signup {
   // registarar funciones para cada input/campo
   addListeners = () => {
     // escucha para los cambios de texto
-    this.emailInput.addEventListener("input", this.handleEmailInput );
+    this.emailInput.addEventListener("input", this.handleEmailInput);
     this.passwordInput.addEventListener("input", this.handlePasswordInput);
     this.repeatPasswordInput.addEventListener("input", this.handleRepeatPasswordInput);
 
@@ -135,14 +129,14 @@ class Signup {
 
   }
 
-  
+
   // activar o desactivar el botón de envio (Sign Up)
   checkButton = () => {
     const errorsObj = validator.getErrors();
     const errorsArr = Object.values(errorsObj);
-    
 
-    if(errorsArr.length > 0) {
+
+    if (errorsArr.length > 0) {
       this.buttonInput.disabled = true;
     }
     else {
@@ -151,7 +145,7 @@ class Signup {
   }
 
   removeMessages = () => {
-    setTimeout( () => {
+    setTimeout(() => {
       this.errorsWrapper.innerHTML = "";
     }, 2000)
   }
@@ -160,13 +154,13 @@ class Signup {
   setErrorMessages = () => {
     // vacia los errores para que no se sumen
     this.errorsWrapper.innerHTML = "";
-    
+
     const errorsObj = validator.getErrors();
 
     // convertir el objeto a un array de strings
     const errorsStringsArr = Object.values(errorsObj);
 
-    errorsStringsArr.forEach( (errorStr) => {
+    errorsStringsArr.forEach((errorStr) => {
       const errorMessageP = document.createElement('p');
       errorMessageP.innerHTML = errorStr;
 
@@ -179,4 +173,4 @@ class Signup {
 // crear una nueva instanica del Signup (objeto)
 const signup = new Signup();
 
-window.addEventListener("load", signup.addListeners );
+window.addEventListener("load", signup.addListeners);

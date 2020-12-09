@@ -19,7 +19,7 @@ class Login {
     const password = this.passwordInput.value;
 
     // Intentar encontrar el usuario
-    const user = usersDB.find( (userObj) => {
+    const user = usersDB.find((userObj) => {
       if (userObj.email === email && userObj.password === password) {
         return true;
       }
@@ -53,7 +53,7 @@ class Login {
   }
 
   redirect = () => {
-    setTimeout( ()=> location.assign('dashboard.html'), 2000);
+    setTimeout(() => location.assign('index.html'), 2000);
   }
 
 }
