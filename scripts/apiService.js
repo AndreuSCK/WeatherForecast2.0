@@ -18,7 +18,7 @@ const getWeather = async (props) => {
     } else if (props === "zipcode") {
         let zipForm = document.querySelector("#zipcodeForm").value
 
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?zip=${zipForm},${country}&appid=${apiKey}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${zipForm},${country}&appid=${apiKey}&units=metric`)
             .then(response => response.json())
             .then(data => dataFilter(data))
             .catch(error => console.log(error))
