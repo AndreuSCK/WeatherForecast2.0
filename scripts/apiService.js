@@ -14,7 +14,7 @@ const getWeather = async (props) => {
             .then(data => dataFilter(data))
             .catch(error => console.log(error))
         document.querySelector("#cityForm").value = ""
-        // return cityWeather
+
     } else if (props === "zipcode") {
         let zipForm = document.querySelector("#zipcodeForm").value
 
@@ -25,12 +25,12 @@ const getWeather = async (props) => {
         document.querySelector("#zipcodeForm").value = ""
     }
 
-    // console.log(weather)
+
 
 }
 
 const dataFilter = (data) => {
-    // console.log(data)
+
 
     weatherData = {
         date: data.list[0].dt_txt,
@@ -75,7 +75,7 @@ const dataFilter = (data) => {
 
 
     }
-    // console.log(weatherData)
+
 
     updateUI(weatherData)
 }
@@ -119,15 +119,13 @@ const updateUI = (weatherData) => {
     img.src = `./img/${currentIMG}.png`
     document.getElementById('imgContainer').appendChild(img)
 
-    // let text = document.createElement('p')
-    // text.innerText = `${weatherData.city}`
-    // document.getElementById('singleCity').appendChild(text)
+
 
     document.getElementById('singleCity').innerText = `${weatherData.city}`;
     document.querySelector('#singleTemperatura').innerText = `${weatherData.temperatureNow}ºC`
     document.querySelector('#singleDescripcion').innerText = `${weatherData.conditionsToday}`
-    // document.querySelector('#singleDayWeek').innerText = `${dayName}`
-    // console.log(weatherData.conditionsToday)
+
+
     document.querySelector('#singleTri1Info').innerText = `${weatherData.humedadToday}%`
     document.querySelector('#singleTri2Info').innerText = `${weatherData.tempMaxToday}º ${weatherData.tempMinToday}º`
     document.querySelector('#singleTri3Info').innerText = `${weatherData.windToday}`
@@ -135,7 +133,8 @@ const updateUI = (weatherData) => {
     let future1Img = currentImgFunction(weatherData.conditionsIDfuture1, dayNightFuture1)
     let future2Img = currentImgFunction(weatherData.conditionsIDfuture2, dayNightFuture2)
     let future3Img = currentImgFunction(weatherData.conditionsIDfuture3, dayNightFuture3)
-    // console.log("aaa" + weatherData.conditionsIDfuture3, dayNightFuture3)
+
+
     let img1 = document.createElement('img')
     let img2 = document.createElement('img')
     let img3 = document.createElement('img')
@@ -202,7 +201,7 @@ const currentImgFunction = (condition, dayorNight) => {
     } else {
         currentIMG = "Clouds"
     }
-    // console.log(condition, daynight)
+
     return currentIMG
 }
 const reload = () => {
@@ -222,9 +221,7 @@ const reload = () => {
     let elem3 = document.querySelector('.image3');
     elem3.parentNode.removeChild(elem3);
 
-    // let images = document.getElementsByClassName("images")
-    // document.getElementsByClassName("images").remove()
-    // images.remove()
+
 
 }
 
@@ -233,8 +230,7 @@ window.addEventListener('load', async (event) => {
     let menu = false
     let menuLogin = false
     let signupS = false
-    // document.querySelector('#singleSection').style.display = 'none'
-    // document.querySelector('#singleSectionTri').style.display = 'none'
+
     let formS
     let singleS
     let singleStri
@@ -350,8 +346,7 @@ window.addEventListener('load', async (event) => {
         })
     }
 
-    // const weather = await getWeather()
-    // dataFilter(weather)
+
 
 
 })
