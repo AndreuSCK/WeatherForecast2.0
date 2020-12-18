@@ -116,7 +116,7 @@ const updateUI = (weatherData) => {
 
     document.querySelector('#formSection')
     let img = document.createElement('img')
-    img.src = `../img/${currentIMG}.png`
+    img.src = `./img/${currentIMG}.png`
     document.getElementById('imgContainer').appendChild(img)
 
     // let text = document.createElement('p')
