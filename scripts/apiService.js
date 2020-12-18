@@ -1,5 +1,5 @@
 // 'use strict';
-const weatherURL = 'http://api.openweathermap.org/data/2.5/';
+const weatherURL = 'https://api.openweathermap.org/data/2.5/';
 
 
 
@@ -80,7 +80,6 @@ const dataFilter = (data) => {
     updateUI(weatherData)
 }
 
-
 const updateUI = (weatherData) => {
     document.querySelector('#formSection').style.display = 'none'
     document.querySelector('#singleSection').style.display = 'grid'
@@ -111,6 +110,7 @@ const updateUI = (weatherData) => {
 
     // console.log(weatherData.city)
 
+    // poner ./
 
     currentDay(weatherData.currentDT)
 
