@@ -139,9 +139,10 @@ const updateUI = (weatherData) => {
     let img1 = document.createElement('img')
     let img2 = document.createElement('img')
     let img3 = document.createElement('img')
-    img1.src = `../img/${future1Img}.png`
-    img2.src = `../img/${future2Img}.png`
-    img3.src = `../img/${future3Img}.png`
+    img1.src = `./img/${future1Img}.png`
+    img2.src = `./img/${future2Img}.png`
+    img3.src = `./img/${future3Img}.png`
+
 
 
 
